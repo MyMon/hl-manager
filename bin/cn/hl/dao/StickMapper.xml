@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hl.dao.StickMapper" >
+
+ <resultMap type="cn.hl.pojo.Stick" id="stick">
+	 <id column="id" property="id"/>
+  	<result column="userId" property="userId" jdbcType="VARCHAR"/>
+  	<result column="title" property="title" jdbcType="VARCHAR"/>
+  	<result column="like" property="like" jdbcType="VARCHAR"/>
+  	<result column="collect" property="collect" jdbcType="VARCHAR"/>
+  	<result column="stick_type" property="stickType" jdbcType="VARCHAR"/>
+  	<result column="stick_money" property="stickMoney" jdbcType="VARCHAR"/>
+  	<result column="stick_open_public" property="stickOpenPublic" jdbcType="VARCHAR"/>
+  	<result column="stick_discuss" property="stickDiscuss" jdbcType="VARCHAR"/>
+  	<result column="is_del" property="isDel" jdbcType="VARCHAR"/>
+  	<result column="statu" property="statu" jdbcType="VARCHAR"/>
+  	<result column="create_date" property="createDate" jdbcType="DATE"/>
+  	<result column="content" property="content" jdbcType="LONGVARCHAR"/>
+  </resultMap>
+   <sql id="key">
+		   <trim suffixOverrides=",">
+		    <if test="stick.id!=null and stick.id!=''">
+		    	 id,
+		    </if>
+		    <if test="stick.userId!=null and stick.userId!=''">
+		    	 user_id,
+		    </if>
+		    <if test="stick.title!=null and stick.title!=''">
+		    	 title,
+		    </if>
+		    <if test="stick.stickType!=null and stick.stickType!=''">
+		    	 stick_type,
+		    </if>
+		    <if test="stick.content!=null and stick.content!=''">
+		    	 content,
+		    </if>
+		   </trim>
+  		</sql>
+		<sql id="values">
+		   <trim suffixOverrides=",">
+		    <if test="stick.id!=null and stick.id!=''">
+		    	 #{stick.id},
+		    </if>
+		    <if test="stick.userId!=null and stick.userId!=''">
+		    	  #{stick.userId},
+		    </if>
+		    <if test="stick.title!=null and stick.title!=''">
+		    	  #{stick.title},
+		    </if>
+		    <if test="stick.stickType!=null and stick.stickType!=''">
+		    	  #{stick.stickType},
+		    </if>
+		    <if test="stick.content!=null and stick.content!=''">
+		    	  #{stick.content},
+		    </if>
+		   </trim>
+  		</sql>
+  <select id="queryStickCountByUserId" resultType="integer">
+  	select count(*) from t_hl_stick ths where ths.user_id=#{userId} and ths.is_del='0' 
+  </select>
+ 
+   <select id="queryStickByUserId" resultType="cn.hl.pojo.Stick" >
+  	select * from t_hl_stick ths where ths.user_id=#{id} and ths.is_del='0' ORDER BY ths.create_date DESC  
+  		limit #{pageNumber},#{limitSize} 
+  </select>
+ 	<insert id="addStickMessage">
+ 		insert into t_hl_stick (<include refid="key"/>) 
+   						 values(<include refid="values"/>)
+ 		
+ 	</insert>
+</mapper>

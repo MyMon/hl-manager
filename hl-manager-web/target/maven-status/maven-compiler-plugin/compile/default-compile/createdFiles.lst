@@ -1,0 +1,10 @@
+cn\hl\controller\SkillManagerController.class
+cn\hl\controller\StickManagerController.class
+cn\hl\controller\HlIndexController.class
+cn\hl\controller\JwtCheckController.class
+cn\hl\controller\FileUploadController.class
+cn\hl\resolver\IntegrateException.class
+cn\hl\controller\UserController.class
+cn\hl\controller\TestController.class
+cn\hl\controller\PageController.class
+cn\hl\interceptor\AuthenticationInterceptor.class

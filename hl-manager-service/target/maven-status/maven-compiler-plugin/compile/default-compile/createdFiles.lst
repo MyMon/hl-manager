@@ -1,0 +1,4 @@
+cn\hl\service\impl\TestServiceImpl.class
+cn\hl\service\proxy\MyGlobalProxy.class
+cn\hl\service\handler\IntegrateException.class
+cn\hl\service\impl\UserServiceImpl.class

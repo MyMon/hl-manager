@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hl.dao.TestMapper" >
+  
+  <resultMap type="cn.hl.pojo.Test" id="test">
+  	<result column="name" property="name"/>
+  	<result column="age" property="age"/>
+  </resultMap>
+  
+  <select id="findTestList" resultMap="test">
+  	select * from test
+  </select>
+  
+  
+</mapper>

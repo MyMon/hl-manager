@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hl.dao.UserMapper" >
+  
+   <resultMap type="cn.hl.pojo.User" id="userMap">
+  	<id column="id" property="id"/>
+  	<result property="userName" column="user_name"/>
+  	<result property="passWord" column="pass_word"/>
+  	<result property="createDate" column="create_date"/>
+  	<result property="userUpDate" column="user_up_date"/>
+  	<result property="userUpCount" column="user_up_count"/>
+  	<result property="name" column="name"/>
+  	<result property="token" column="token"/>
+  	<result property="userDetail" column="user_detail"/>
+  	<result property="age" column="age"/>
+  	<result property="headUrl" column="head_url"/>
+  </resultMap>
+   
+  <insert id="addUserOfRegister">
+  	<selectKey keyProperty="id" order="AFTER" resultType="String">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+  	insert into t_hl_user (id,user_name,pass_word,name)
+  		values (#{user.id},#{user.userName},#{user.passWord},#{user.name})
+  </insert>
+  <select id="queryUserOfLogin" resultMap="userMap">
+  	select thu.*  from t_hl_user thu where thu.user_name=#{user.userName} and thu.pass_word=#{user.passWord}
+  </select>
+  
+  <select id="findUserById" resultMap="userMap">
+  	select * from t_hl_user thu where thu.id=#{id} 
+  </select>
+  <update id="updateUserMessageById" >
+  	update t_hl_user
+  	<trim prefix="set" suffixOverrides=",">
+  		<if test="user.passWord!=null">pass_word=#{user.passWord},</if>
+  		<if test="user.name!=null">name=#{user.name},</if>
+  		<if test="user.userDetail!=null">user_detail=#{user.userDetail},</if>
+  		<if test="user.headUrl!=null">head_url=#{user.headUrl},</if>
+  		<if test="user.age!=null">age=#{user.age},</if>
+  	</trim>
+  where id=#{user.id}
+  </update>
+</mapper>

@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+/* .register_form{width: 60%;} */
+.register_form .layui-form-item .layui-input-inline .register_identigying{width: 56%;float: left;}
+.register_form .layui-form-item .layui-input-inline .register_identigying_code{float:left;width: 33%;height: 38px;margin-left: 12px;}
+.register_form .layui-form-item .register_btn_div{text-align: center;margin-left: 0px;}
+.register_form .layui-form-item .register_btn_div .register_btn{    width: 50%;}
+
+
+
+
+

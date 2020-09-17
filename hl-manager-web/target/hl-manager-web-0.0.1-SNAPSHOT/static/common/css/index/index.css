@@ -1,0 +1,26 @@
+.iconfont-color:hover{
+	color:grey;
+	cursor:pointer;
+}
+.index-send{
+	    cursor: pointer;
+    position: relative;
+    color: #bdbec1;
+    font-size: 14px;
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    background: #009688;
+    border-radius: 2px;
+    margin-left: 14px;
+	
+}
+.index-send-div{
+	    position: relative;
+    left: 60%;
+}
+.layui-nav-child{
+	top:60px !important;
+}

@@ -1,0 +1,1 @@
+var base_path='${pageContext.request.contextPath}';

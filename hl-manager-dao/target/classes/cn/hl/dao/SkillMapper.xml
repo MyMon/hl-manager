@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hl.dao.SkillMapper" >
+
+   <sql id="key">
+		   <trim suffixOverrides=",">
+		    <if test="skill.id!=null and skill.id!=''">
+		    	 id,
+		    </if>
+		    <if test="skill.userId!=null and skill.userId!=''">
+		    	 user_id,
+		    </if>
+		    <if test="skill.skillType!=null and skill.skillType!=''">
+		    	 skill_type,
+		    </if>
+		    <if test="skill.skillContent!=null and skill.skillContent!=''">
+		    	 skill_content,
+		    </if>
+		   </trim>
+  		</sql>
+		<sql id="values">
+		   <trim suffixOverrides=",">
+		    <if test="skill.id!=null and skill.id!=''">
+		    	 #{skill.id},
+		    </if>
+		    <if test="skill.userId!=null and skill.userId!=''">
+		    	  #{skill.userId},
+		    </if>
+		    <if test="skill.skillType!=null and skill.skillType!=''">
+		    	  #{skill.skillType},
+		    </if>
+		    <if test="skill.skillContent!=null and skill.skillContent!=''">
+		    	  #{skill.skillContent},
+		    </if>
+		   </trim>
+  		</sql>
+ 	<insert id="addSkillMessage">
+ 		insert into t_hl_skill (<include refid="key"/>) 
+   						 values(<include refid="values"/>)
+ 		
+ 	</insert>
+ 	<select id="querySkillByType" resultType="cn.hl.pojo.Skill">
+ 		select * from t_hl_skill ths where ths.skill_type=#{skill.skillType} and is_Del=0 and ths.user_id=#{skill.userId}
+ 	</select>
+ 	<update id="updateSkillMessage">
+ 		update t_hl_skill ths set ths.skill_content=#{skill.skillContent} where ths.id=#{skill.id}
+ 	</update>
+ 	<insert id="initSkillOfUser">
+ 		insert into t_hl_skill (id,skill_type,user_id) values
+ 		<foreach collection="list" item="item" index="index" separator=",">
+ 			<if test="#{item}!=null">
+	 			(#{item.id},#{item.skillType},#{item.userId})
+ 			</if>
+ 		</foreach>
+ 	</insert>
+ 	
+</mapper>

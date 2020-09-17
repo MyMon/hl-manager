@@ -1,0 +1,16 @@
+{
+  "id": "1721219",
+  "name": "hl",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "独立搭建的个人网站",
+  "glyphs": [
+    {
+      "icon_id": "1273012",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}

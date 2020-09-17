@@ -1,0 +1,11 @@
+cn\hl\pojo\Test.class
+cn\hl\pojo\FtpEntity.class
+cn\hl\pojo\Stick.class
+cn\hl\pojo\BaseBean.class
+cn\hl\utils\CommonResult.class
+cn\hl\utils\RequestJsonException.class
+cn\hl\utils\CommonConstant.class
+cn\hl\utils\RequestViewException.class
+cn\hl\pojo\Skill.class
+cn\hl\utils\HlUtils.class
+cn\hl\pojo\User.class

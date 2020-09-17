@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /test HTTP/1.1" 200 4417 http-bio-8081-exec-1 273
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/css/layui.css HTTP/1.1" 200 90052 http-bio-8081-exec-2 7
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/css/login.css HTTP/1.1" 200 6559 http-bio-8081-exec-3 8
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/jquery.min.js HTTP/1.1" 200 93106 http-bio-8081-exec-4 7
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/common/ajax_server.js HTTP/1.1" 200 5871 http-bio-8081-exec-5 7
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/layui.js HTTP/1.1" 200 6675 http-bio-8081-exec-6 9
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/login_index.js HTTP/1.1" 200 3930 http-bio-8081-exec-7 10
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/jparticle.min.js HTTP/1.1" 200 5313 http-bio-8081-exec-9 2
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/zylVerificationCode.js HTTP/1.1" 200 463 http-bio-8081-exec-8 2
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/lay/modules/carousel.js HTTP/1.1" 200 3862 http-bio-8081-exec-8 4
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/lay/modules/form.js HTTP/1.1" 200 9329 http-bio-8081-exec-5 3
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/lay/modules/layer.js HTTP/1.1" 200 36367 http-bio-8081-exec-5 4
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/css/modules/layer/default/layer.css?v=3.1.1 HTTP/1.1" 200 14425 http-bio-8081-exec-5 5
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /static/common/js/layui/font/iconfont.woff2?v=250 HTTP/1.1" 200 23140 http-bio-8081-exec-8 134
+0:0:0:0:0:0:0:1 - - [09/May/2020:18:14:32 +0800] "GET /favicon.ico HTTP/1.1" 404 999 http-bio-8081-exec-6 41
